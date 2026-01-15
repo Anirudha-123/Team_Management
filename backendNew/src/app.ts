@@ -15,14 +15,21 @@ connectDB()
 
 
 // app.use("/uploads", express.static("uploads"));
-app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
+// app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 
 
 
-app.use(cors({ origin: ["http://localhost:5173" , "https://team-management-2tnw.onrender.com"], credentials: true }));
+// app.use(cors({ origin: ["http://localhost:5173" , "https://team-management-2tnw.onrender.com"], credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
+
+// Serve uploads
+app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
+
+// CORS for both dev and deployed frontend
+app.use(cors({ origin: CLIENT_URL, credentials: true }));
 
 app.use("/api/members", memberRoutes);
 
