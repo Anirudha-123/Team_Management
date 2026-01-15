@@ -25,7 +25,6 @@ const API_URL = "https://team-management-backend-7d1o.onrender.com/api/members";
 
 const Profile: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  console.log("id")
   const navigate = useNavigate();
   const [member, setMember] = useState<Member | null>(null);
   const [loading, setLoading] = useState(true);
@@ -35,7 +34,6 @@ const Profile: React.FC = () => {
       try {
         const res = await axios.get(`${API_URL}/${id}`);
         setMember(res.data);
-        console.log(res.data)
       } catch (error) {
         console.error("Failed to load profile", error);
       } finally {
