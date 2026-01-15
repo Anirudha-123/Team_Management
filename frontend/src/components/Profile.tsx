@@ -73,7 +73,7 @@ const Profile: React.FC = () => {
           <img
             src={
               member.photo
-                ? `http://localhost:8080${member.photo}`
+                ? `https://team-management-backend-7d1o.onrender.com${member.photo}`
                 : "/default-avatar.png"
             }
             alt={member.fullName}
