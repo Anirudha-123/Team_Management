@@ -86,7 +86,7 @@ const Profile: React.FC = () => {
         </div>
 
         {/* Details */}
-        <div className="p-8 grid md:grid-cols-2 gap-8 border-b border-gray-200">
+        <div className="p-8 grid md:grid-cols-2 gap-8 border-b border-gray-400">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <FaEnvelope />
