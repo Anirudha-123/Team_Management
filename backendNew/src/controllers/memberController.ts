@@ -46,7 +46,7 @@ export const addMember = async (req: Request, res: Response) => {
 
 export const updateMember = async (req: Request, res: Response) => {
   try {
-    const { fullName, designation, email, phone, department, joinDate, bio } = req.body;
+    const { fullName, designation, email, phone, department, joinDate, bio , status} = req.body;
 
     // Server-side validation for required fields
     if (!fullName || !designation || !email || !phone || !department || !joinDate) {
@@ -64,6 +64,7 @@ export const updateMember = async (req: Request, res: Response) => {
       department,
       joinDate,
       bio, // optional
+      status
     };
 
     // If file is uploaded
