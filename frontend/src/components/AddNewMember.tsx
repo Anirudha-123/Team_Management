@@ -9,7 +9,7 @@ import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Textarea } from "../ui/textarea";
 
-const API_URL = "http://localhost:8080/api/members";
+const API_URL = "https://team-management-backend-7d1o.onrender.com/api/members";
 
 const AddNewMember: React.FC = () => {
   const [isActive, setIsActive] = useState(true);
@@ -47,7 +47,7 @@ const AddNewMember: React.FC = () => {
         });
 
         if (res.data.photo) {
-          setPhotoPreview(`http://localhost:8080${res.data.photo}`);
+          setPhotoPreview(`https://team-management-backend-7d1o.onrender.com${res.data.photo}`);
         }
       });
     }
