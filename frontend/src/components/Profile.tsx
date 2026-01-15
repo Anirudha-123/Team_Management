@@ -21,7 +21,7 @@ type Member = {
   photo?: string;
 };
 
-const API_URL = "http://localhost:8080/api/members";
+const API_URL = "https://team-management-backend-7d1o.onrender.com/api/members";
 
 const Profile: React.FC = () => {
   const { id } = useParams<{ id: string }>();
