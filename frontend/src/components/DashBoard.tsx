@@ -142,7 +142,7 @@ const DashBoard: React.FC = () => {
             <img
               src={
                 member.photo
-                  ? `http://localhost:8080${member.photo}`
+                  ? `https://team-management-backend-7d1o.onrender.com${member.photo}`
                   : "/default-avatar.png"
               }
               className="h-24 w-24 rounded-full mx-auto object-cover"
