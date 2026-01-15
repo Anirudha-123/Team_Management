@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/members";
+const API_URL = "https://team-management-backend-7d1o.onrender.com/api/members";
 
 /* ➕ Add Member */
 export const createMember = async (data: any) => {
